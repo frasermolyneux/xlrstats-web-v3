@@ -33,8 +33,8 @@
 		/* For theme development */
 			//echo $this->Html->css('less/xlrstats.generic.less?', 'stylesheet/less');
 		echo $this->Html->css('cookiecuttr');
-		echo $this->Html->css('http://fonts.googleapis.com/css?family=Lato:400,700');
-		echo $this->Html->css('http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic');
+		echo $this->Html->css('https://fonts.googleapis.com/css?family=Lato:400,700');
+		echo $this->Html->css('https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->Html->script('modernizr-2.6.1-respond-1.1.0.min'); //Modernizr
