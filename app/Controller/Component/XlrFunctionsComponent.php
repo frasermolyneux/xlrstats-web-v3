@@ -253,33 +253,34 @@ class XlrFunctionsComponent extends Component {
 /**
  * @return bool|mixed
  */
-	public function isLicenseValid() {
-		// The license server will only be polled once p/5minutes when invalid, and once p/week when valid
-		if (Configure::check('license.valid')) {
-			return Configure::read('license.valid');
-		} else {
-			$json = Cache::read('licenseKeyInfo', '1week');
-			if (!$json) {
-				$json = Cache::read('licenseKeyInfo', '5min');
-			}
-			if (!$json) {
-				$json = $this->getLicenseDetails(Configure::read('options.license'));
-				//Cache::write('licenseKeyInfo', $json, '1week');
-			}
-
-			if (!$json['result']['valid']) {
-				// Cache invalid licenses for 5 minutes
-				Cache::write('licenseKeyInfo', $json, '5min');
-				Configure::write('license.valid', false);
-				return false;
-			} else {
-				// Cache valid licenses for 1 week
-				Cache::write('licenseKeyInfo', $json, '1week');
-				Configure::write('license.valid', true);
-				return true;
-			}
+public function isLicenseValid() {
+	// Disable license checking, always return true
+	return true;
+	// The license server will only be polled once p/5minutes when invalid, and once p/week when valid
+/*		if (Configure::check('license.valid')) {
+		return Configure::read('license.valid');
+	} else {
+		$json = Cache::read('licenseKeyInfo', '1week');
+		if (!$json) {
+			$json = Cache::read('licenseKeyInfo', '5min');
 		}
-	}
+		if (!$json) {
+			$json = $this->getLicenseDetails(Configure::read('options.license'));
+			//Cache::write('licenseKeyInfo', $json, '1week');
+		}
+		if (!$json['result']['valid']) {
+			// Cache invalid licenses for 5 minutes
+			Cache::write('licenseKeyInfo', $json, '5min');
+			Configure::write('license.valid', false);
+			return false;
+		} else {
+			// Cache valid licenses for 1 week
+			Cache::write('licenseKeyInfo', $json, '1week');
+			Configure::write('license.valid', true);
+			return true;
+		}
+	}*/
+}
 
 	//-------------------------------------------------------------------
 
