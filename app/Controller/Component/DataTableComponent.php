@@ -175,9 +175,9 @@ class DataTableComponent extends Component {
  * @throws Exception
  */
 	private function getOrderByStatements() {
-		if (!isset($this->controller->paginate['fields']) && empty($this->fields)) {
-			throw new Exception("Missing fields option in Paginate. Please set the fields so I know what to order by.");
-		}
+		#if (!isset($this->controller->paginate['fields']) && empty($this->fields)) {
+		#	throw new Exception("Missing fields option in Paginate. Please set the fields so I know what to order by.");
+		#}
 
 		$orderBy = '';
 
