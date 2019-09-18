@@ -50,7 +50,7 @@ class ServerGroup extends AppModel {
 	public $validate = array(
 		'name' => array(
 			'required' => array(
-				'rule' => array('notEmpty'),
+				'rule' => array('notBlank'),
 				'required' => true,
 				'allowEmpty' => false,
 				'message' => 'Please enter a server group name.'
@@ -65,7 +65,7 @@ class ServerGroup extends AppModel {
 			),
 		),
 		'description' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'allowEmpty' => false,
 			'message' => 'Please enter a description for this server group.'

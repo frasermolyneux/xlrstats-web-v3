@@ -66,27 +66,27 @@ class Server extends DashboardAppModel {
  */
 	public $validate = array(
 		'servername' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'message' => 'Please enter a server name',
 		),
 		'gamename' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'message' => 'Please select your game',
 		),
 		'dbhost' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'message' => 'Please enter database host IP or URL for your B3 server',
 		),
 		'dbuser' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'message' => 'Please your B3 database user name',
 		),
 		'dbname' => array(
-			'rule' => 'notEmpty',
+			'rule' => 'notBlank',
 			'required' => true,
 			'message' => 'Please your B3 database name',
 		),

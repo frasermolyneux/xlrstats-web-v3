@@ -76,7 +76,7 @@ class User extends UsersAppModel {
 	public $validate = array(
 		'username' => array(
 			'required' => array(
-				'rule' => array('notEmpty'),
+				'rule' => array('notBlank'),
 				'required' => true, 'allowEmpty' => false,
 				'message' => 'Please enter a username.'),
 			'alpha' => array(
@@ -101,7 +101,7 @@ class User extends UsersAppModel {
 				'rule' => array('minLength', '6'),
 				'message' => 'The password must have at least 6 characters.'),
 			'required' => array(
-				'rule' => 'notEmpty',
+				'rule' => 'notBlank',
 				'message' => 'Please enter a password.')),
 		'temppassword' => array(
 			'rule' => 'confirmPassword',
@@ -188,11 +188,11 @@ class User extends UsersAppModel {
 				'validDate' => array(
 					'rule' => array('date'), 'allowEmpty' => true, 'message' => __d('users', 'Invalid date'))),
 			'first_name' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'), 'allowEmpty' => true, 'message' => __d('users', 'Invalid date'))),
+				'notBlank' => array(
+					'rule' => array('notBlank'), 'allowEmpty' => true, 'message' => __d('users', 'Invalid date'))),
 			'last_name' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'), 'allowEmpty' => true, 'message' => __d('users', 'Invalid date'))));
+				'notBlank' => array(
+					'rule' => array('notBlank'), 'allowEmpty' => true, 'message' => __d('users', 'Invalid date'))));
 	}
 
 /**

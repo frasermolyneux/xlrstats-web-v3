@@ -563,7 +563,7 @@ class ModelValidationTest extends BaseModelTest {
 		$TestModel = new TheVoid();
 		$TestModel->validate = array(
 			'title' => array(
-				'notEmpty' => array(
+				'notBlank' => array(
 					'rule' => array('notBlank'),
 					'required' => true,
 				),

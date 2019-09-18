@@ -27,12 +27,12 @@ class Page extends Content {
 
 // CTI models
 class Asset extends CakeTestModel {
-	public $validate = array('title' => array('rule' => 'notEmpty'));
+	public $validate = array('title' => array('rule' => 'notBlank'));
 }
 
 class Link extends Asset {
 	public $actsAs = array('Utils.Inheritable' => array('method'=>'CTI'));
-	public $validate = array('url' => array('rule' => 'notEmpty'));
+	public $validate = array('url' => array('rule' => 'notBlank'));
 }
 class Image extends Asset {
 	public $actsAs = array('Utils.Inheritable' => array('method'=>'CTI'));
