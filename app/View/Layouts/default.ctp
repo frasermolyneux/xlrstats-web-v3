@@ -37,7 +37,7 @@
 		echo $this->Html->script('modernizr-2.6.2-respond-1.1.0.min'); //Modernizr
 		echo $this->Html->script('jquery-1.8.2.min'); //jQuery library
 		echo $this->Html->script('jquery.dataTables.min'); //dataTables jQuery plugin
-		echo $this->Html->script('http://maps.google.com/maps/api/js?sensor=true'); //Google Maps jQuery plugin
+		echo $this->Html->script('https://maps.google.com/maps/api/js?sensor=true'); //Google Maps jQuery plugin
 		echo $this->Html->script('jquery.ui.map.full.min.js'); //Google Maps jQuery plugin
 		echo $this->Html->script('markerclusterer'); //for Google Maps jQuery plugin
 		echo $this->Html->script('paging'); // bootstrap pagination plugin for dataTables
