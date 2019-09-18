@@ -27,7 +27,7 @@
 					array(
 						'alt' => 'Gravatar',
 					)),
-				'http://www.gravatar.com',
+				'https://www.gravatar.com',
 				array('escape' => false	)
 			);
 			?>

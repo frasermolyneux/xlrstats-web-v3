@@ -121,7 +121,7 @@ echo $this->TwitterBootstrap->page_header('Player Profile Page');
 		<?php
 		echo '<p>' . __('Gravatar') . '</p>';
 		$gravatarLink = $this->Html->link('Gravatar',
-			'http://www.gravatar.com',
+			'https://www.gravatar.com',
 			array(
 				'target' => '_blank',
 				'escape' => false
@@ -136,7 +136,7 @@ echo $this->TwitterBootstrap->page_header('Player Profile Page');
 				'data-original-title' => 'Get your own Gravatar',
 				'class' => 'img-polaroid',
 			)),
-			'http://www.gravatar.com',
+			'https://www.gravatar.com',
 			array(
 				'target' => '_blank',
 				'escape' => false
